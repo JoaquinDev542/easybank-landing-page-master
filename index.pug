@@ -1,0 +1,79 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./css/index.css")
+        title Document
+    body
+        header.header
+            a.headerLogo(href="#"): img.headerLogo__img(src="./images/logo.svg", alt="Logo Svg")
+            nav.nav
+                ul.navList 
+                    - for (var x = 0; x < 5; x++)
+                        li.navList__item: a.navList__link(href="#")
+            a.headerLink(href="#") Request Invite
+        main.main 
+            .hero
+                section.heroContent
+                    h1.heroContent__title Nex generation digital banking
+                    p.heroContent__paragraph.paragraph Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
+                    a.heroContent__link.cta(href="#") Request Invite
+                .heroImg 
+                    img.heroImg__img(src="./images/image-mockups.png", alt="Imagen hero") 
+            section.information 
+                h2.information__title.subtitle Why choose Easybank?
+                p.information__paragraph.paragraph We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.
+                .informationContent
+                    section.informationContentBox.informationContentBox--first
+                        mixin informationContentBox
+                            img.informationContentBox__img(src="", alt="")
+                            h3.informationContentBox__title.subsubtitle
+                            p.informationContentBox__paragraph 
+                        +informationContentBox   
+                    section.informationContentBox.informationContentBox--second
+                        +informationContentBox    
+                    section.informationContentBox.informationContentBox--third
+                        +informationContentBox    
+                    section.informationContentBox.informationContentBox--fourth
+                        +informationContentBox      
+            section.articles 
+                h2.articles__title.subtitle Latest Articles 
+                .articlesContent 
+                    .articlesContentBox.articlesContentBox--first
+                        mixin articlesContentBoxContent 
+                            span.articlesContentBox__span
+                            h4.articlesContentBox__title 
+                            p.articlesContentBox__paragraph.paragraph
+                        +articlesContentBoxContent
+                    .articlesContentBox.articlesContentBox--second 
+                        +articlesContentBoxContent
+                    .articlesContentBox.articlesContentBox--third 
+                        +articlesContentBoxContent
+                    .articlesContentBox.articlesContentBox--fourth 
+                        +articlesContentBoxContent
+        footer.footer 
+            .footerContent 
+                .footerContentHeader 
+                    img(src="./images/logo.svg", alt="Logo Svg")
+                    ul.footerContentHeaderList
+                        mixin footerContentHeaderListContent 
+                            li.footerContentHeaderlist__item: a.footerContentHeaderList__link(href="#"): img(src="", alt="")
+                        +footerContentHeaderListContent
+                        +footerContentHeaderListContent 
+                        +footerContentHeaderListContent 
+                        +footerContentHeaderListContent 
+                        +footerContentHeaderListContent 
+                nav.footerContentLink: ul.footerContentLinkList
+                    mixin footerContentLinkContent
+                        li.footerContentLinkList__item: a.footerContentLinkList__link(href="#")
+                    +footerContentLinkContent 
+                    +footerContentLinkContent  
+                    +footerContentLinkContent  
+                    +footerContentLinkContent  
+                    +footerContentLinkContent  
+                    +footerContentLinkContent  
+            .footerCopyright
+                a.footerCopyright__link.cta(href="#") Request Invite
+                span.footerCopyright__span © Joaquín García. All Rights Reserved
