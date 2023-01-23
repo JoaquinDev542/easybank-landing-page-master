@@ -17,11 +17,16 @@
   left: 0;
   width: 100%;
   height: auto;
+  padding: var(--padding-mobile);
+  background-color: var(--white);
+}
+
+.headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--padding-mobile);
-  background-color: var(--white);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .nav {
@@ -68,6 +73,13 @@
 .footer {
   padding: 20px 0;
   background-color: var(--darkBlue);
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .footerContent {
@@ -161,14 +173,27 @@ img {
 .main {
   padding: var(--padding-mobile);
 }
+@media screen and (min-width: 1024px) {
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 
 .hero {
   display: grid;
   grid-template-areas: "heroImg__img" "heroContent";
-  height: 100vh;
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "heroContent heroImg__img";
+  }
 }
 
 .heroImg__img {
+  display: block;
+  margin: 0 auto;
   grid-area: heroImg__img;
 }
 
@@ -192,16 +217,35 @@ img {
   width: max-content;
   margin: 0 auto;
 }
+@media screen and (min-width: 1024px) {
+  .heroContent {
+    text-align: left;
+  }
+}
 
 .information {
   padding: 35px 0;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .information {
+    text-align: left;
+  }
+  .information__paragraph {
+    width: 60%;
+  }
 }
 
 .informationContent {
   display: grid;
   gap: 25px;
   margin-top: 75px;
+}
+@media screen and (min-width: 1024px) {
+  .informationContent {
+    display: flex;
+    text-align: left;
+  }
 }
 
 .articles__title {
@@ -211,6 +255,12 @@ img {
 .articlesContent {
   display: grid;
   gap: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .articlesContent {
+    display: flex;
+    gap: 25px;
+  }
 }
 
 .articlesContentBox {
@@ -226,6 +276,9 @@ img {
 }
 
 .articlesContentBox__img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
