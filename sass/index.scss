@@ -39,6 +39,7 @@ img {
     padding: var(--padding-mobile);
 
     @media screen and (min-width:1024px) {
+        padding: var(--padding-portatil);
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -51,8 +52,10 @@ img {
     "heroContent";
 
     @media screen and (min-width:1024px){
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50% 50%;
         grid-template-areas: "heroContent heroImg__img" ;
+        align-items: center;
+        gap: 50px;
     }
 }
 
@@ -73,15 +76,27 @@ img {
         color: var(--darkBlue);
         font-weight: 300;
         margin: 0;
+
+        @media screen and (min-width:1024px){
+            width: 80%;
+        }
     }
 
     &__paragraph {
         margin: 0;
+
+        @media screen and (min-width:1024px){
+            width: 85%;
+        }
     }
 
     &__link {
         width: max-content;
         margin: 0 auto;
+
+        @media screen and (min-width:1024px){
+            margin: initial;
+        }
     }
 
     @media screen and (min-width:1024px) {
@@ -116,6 +131,10 @@ img {
 .articles {
     &__title {
         text-align: center;
+
+        @media screen and (min-width:1024px) {
+            text-align: left;
+        }
     }
 }
 
