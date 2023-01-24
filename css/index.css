@@ -69,9 +69,12 @@
     text-decoration: none;
     color: var(--grayishBlue);
     transition: 0.5s color;
+    font-size: 14px;
+    padding-bottom: 37.845px;
   }
   .navList__link:hover {
     color: #121212;
+    border-bottom: 3px solid #31d35c;
   }
   .headerLink {
     display: block;
@@ -150,6 +153,13 @@
   text-align: center;
   margin-bottom: 50px;
 }
+@media screen and (min-width: 768px) {
+  .footerContentLinkList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 1024px) {
   .footerContentLinkList {
     display: flex;
@@ -158,6 +168,11 @@
 }
 .footerContentLinkList__item {
   margin-top: 15px;
+}
+@media screen and (min-width: 768px) {
+  .footerContentLinkList__item {
+    margin-right: 25px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .footerContentLinkList__item {
@@ -172,6 +187,17 @@
 }
 .footerContentLinkList__link:hover {
   color: #31d35c;
+}
+
+@media screen and (min-width: 768px) {
+  .footerContentLinkListContainer {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footerContentLinkListContainer {
+    display: block;
+  }
 }
 
 .footerCopyright {
@@ -244,6 +270,15 @@ img {
   grid-template-areas: "heroImg__img" "heroContent";
   padding: var(--paddingSections);
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "heroContent heroImg__img";
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .hero {
     grid-template-columns: 50% 50%;
@@ -312,11 +347,28 @@ img {
     width: 60%;
   }
 }
+@media screen and (min-width: 768px) {
+  .information__paragraph {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .information__paragraph {
+    margin: initial;
+  }
+}
 
 .informationContent {
   display: grid;
   gap: 25px;
   margin-top: 75px;
+}
+@media screen and (min-width: 768px) {
+  .informationContent {
+    grid-template-columns: auto auto;
+    gap: 25px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .informationContent {
@@ -341,10 +393,15 @@ img {
   display: grid;
   gap: 50px;
 }
+@media screen and (min-width: 768px) {
+  .articlesContent {
+    grid-template-columns: auto auto;
+    gap: 25px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .articlesContent {
     display: flex;
-    gap: 25px;
   }
 }
 

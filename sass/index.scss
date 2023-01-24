@@ -52,6 +52,14 @@ img {
     "heroContent";
     padding: var(--paddingSections);
 
+    @media screen and (min-width:768px){
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "heroContent heroImg__img" ;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
     @media screen and (min-width:1024px){
         grid-template-columns: 50% 50%;
         grid-template-areas: "heroContent heroImg__img" ;
@@ -108,10 +116,22 @@ img {
 .information {
     padding: var(--paddingSections);
     text-align: center;
+
     @media screen and (min-width:1024px){
         text-align: left;
         &__paragraph {
             width: 60%;
+        }
+    }
+
+    &__paragraph {
+        @media screen and (min-width:768px){
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width:1024px){
+            margin: initial;
         }
     }
 }
@@ -120,6 +140,11 @@ img {
     display: grid;
     gap: 25px;
     margin-top: 75px;
+
+    @media screen and (min-width:768px){
+        grid-template-columns: auto auto;      
+        gap: 25px;
+    }
 
     @media screen and (min-width:1024px){
         display: flex;
@@ -141,9 +166,13 @@ img {
     display: grid;
     gap: 50px;
 
+    @media screen and (min-width:768px){
+        grid-template-columns: auto auto;      
+        gap: 25px;
+    }
+
     @media screen and (min-width:1024px) {
         display: flex;
-        gap: 25px;
     }
 }
 
