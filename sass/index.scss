@@ -50,6 +50,7 @@ img {
     grid-template-areas: 
     "heroImg__img"
     "heroContent";
+    padding: var(--paddingSections);
 
     @media screen and (min-width:1024px){
         grid-template-columns: 50% 50%;
@@ -105,12 +106,10 @@ img {
 }
 
 .information {
-    padding: 35px 0;
+    padding: var(--paddingSections);
     text-align: center;
-
     @media screen and (min-width:1024px){
         text-align: left;
-
         &__paragraph {
             width: 60%;
         }
@@ -129,9 +128,9 @@ img {
 }
 
 .articles {
+    padding: var(--paddingSections);
     &__title {
         text-align: center;
-
         @media screen and (min-width:1024px) {
             text-align: left;
         }
