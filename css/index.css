@@ -275,7 +275,6 @@ img {
     grid-template-areas: "heroContent heroImg__img";
     justify-content: center;
     align-items: center;
-    gap: 25px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -283,7 +282,6 @@ img {
     grid-template-columns: 50% 50%;
     grid-template-areas: "heroContent heroImg__img";
     align-items: center;
-    gap: 50px;
   }
 }
 
@@ -299,6 +297,11 @@ img {
   gap: 25px;
   grid-area: heroContent;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .heroContent {
+    text-align: left;
+  }
 }
 .heroContent__title {
   font-size: 45px;
@@ -322,6 +325,11 @@ img {
 .heroContent__link {
   width: max-content;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .heroContent__link {
+    margin: initial;
+  }
 }
 @media screen and (min-width: 1024px) {
   .heroContent__link {
